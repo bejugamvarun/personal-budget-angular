@@ -7,22 +7,22 @@ body {
     font-family: Tahoma, Arial;
 }
 
-div.menu {
+nav.menu {
     width: 100%;
     background-color: #4d5791;
     height: 44px;
     padding: 0 40px;
 }
 
-div.menu ul,
-div.menu ul li {
+nav.menu ul,
+nav.menu ul li {
     margin: 0;
-    padding: 0 ;
+    padding: 0;
     list-style: none;
     display: inline-block;
 }
 
-div.menu ul li a {
+nav.menu ul li a {
     display: block;
     padding: 0 20px;
     line-height: 44px;
@@ -32,34 +32,51 @@ div.menu ul li a {
     margin: 0;
 }
 
-div.menu ul li a:hover  {
+nav.menu ul li a:hover {
     background-color: white;
     color: #4d5791;
 }
 
-div.hero {
+nav.menu ul li a.skip-to-content {
+    position: relative;
+    left: 64vw;
+    display: block;
+    padding: 0 20px;
+    line-height: 44px;
+    font-size: 1.4em;
+    text-decoration: none;
+    color: #fff;
+    margin: 0;
+}
+
+nav.menu ul li a.skip-to-content:hover {
+    background-color: white;
+    color: #4d5791;
+}
+
+header.hero {
     height: 350px;
     background-color: #b4c6f0;
-    background-image: url('/bg.png');
+    background-image: url('./bg.png');
     background-size: 400px;
     background-repeat: no-repeat;
     background-position: center bottom;
     padding-top: 40px;
 }
 
-div.hero h1,
-div.hero h2 {
+header.hero h1,
+header.hero h2 {
     text-align: center;
     margin: 0;
 }
 
-div.hero h1 {
+header.hero h1 {
     color: #fff;
     font-size: 4.2em;
     margin-bottom: 20px;
 }
 
-div.hero h2 {
+header.hero h2 {
     color: #4d5791;
 }
 
@@ -83,7 +100,7 @@ div.hero h2 {
     text-align: center;
 }
 
-.container div.text-box {
+.container section.text-box {
     display: inline-block;
     width: 100%;
     max-width: 340px;
@@ -91,8 +108,51 @@ div.hero h2 {
     margin: 20px;
 }
 
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
     .container .div.text-box {
         margin: 10px;
+    }
+} */
+
+/* Responsive styling for smaller screens using media queries */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+        /* Adjust font size for smaller screens */
+    }
+
+    .container {
+        padding: 20px;
+        /* Adjust padding for smaller screens */
+    }
+
+    .hero {
+        height: 250px;
+        /* Adjust the height of the hero section for smaller screens */
+        background-size: 300px;
+        /* Adjust background size for smaller screens */
+    }
+
+    .text-box {
+        max-width: 100%;
+        /* Make text boxes occupy full width on smaller screens */
+        margin: 10px;
+        /* Adjust margin for smaller screens */
+    }
+
+    .bottom {
+        padding: 20px;
+        /* Adjust padding for the bottom section on smaller screens */
+    }
+
+    div.menu ul {
+        text-align: center;
+        /* Center align menu items on smaller screens */
+    }
+
+    div.menu ul li {
+        display: block;
+        margin: 10px 0;
+        /* Add spacing between menu items on smaller screens */
     }
 }
