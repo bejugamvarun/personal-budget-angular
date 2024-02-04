@@ -86,7 +86,7 @@ header.hero h2 {
 }
 
 .page-area {
-    max-width: 768px;
+    max-width: 800px;
     display: inline-block;
 }
 
@@ -100,12 +100,24 @@ header.hero h2 {
     text-align: center;
 }
 
-.container section.text-box {
+.container article.text-box {
     display: inline-block;
     width: 100%;
-    max-width: 340px;
+    max-width: 350px;
     text-align: justify;
     margin: 20px;
+    padding: 0.3rem;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    background-color: #c8d4f0;
+}
+
+.d3-chart {
+    width: 100%;
+    padding: 0.3rem;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    background-color: #c8d4f0;
 }
 
 /* @media screen and (min-width: 768px) {
