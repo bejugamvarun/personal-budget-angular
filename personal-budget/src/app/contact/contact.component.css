@@ -7,7 +7,7 @@
   text-align: center;
   margin: 0 auto;
   padding: 40px 0;
-  font: 300 60px 'Oswald', sans-serif;
+  font: 300 60px "Oswald", sans-serif;
   color: #3895cb;
   text-transform: uppercase;
   letter-spacing: 6px;
@@ -27,7 +27,7 @@
 .form-horizontal {
   /*float: left;*/
   max-width: 400px;
-  font-family: 'Lato';
+  font-family: "Lato";
   font-weight: 400;
 }
 
@@ -44,19 +44,19 @@ textarea {
   height: 34px;
   width: 400px;
   overflow: hidden;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .alt-send-button {
   width: 400px;
   height: 34px;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .send-text {
   display: block;
   margin-top: 10px;
-  font: 700 12px 'Lato', sans-serif;
+  font: 700 12px "Lato", sans-serif;
   letter-spacing: 2px;
 }
 
@@ -82,7 +82,7 @@ textarea {
 }
 
 .contact-text {
-  font: 300 18px 'Lato', sans-serif;
+  font: 300 18px "Lato", sans-serif;
   letter-spacing: 1.9px;
   color: #110909;
 }
@@ -110,7 +110,6 @@ textarea {
   text-decoration: none;
 }
 
-
 /* Social Media Icons */
 .social-media-list {
   position: relative;
@@ -136,11 +135,11 @@ textarea {
   color: #070404;
   background-color: rgb(58, 118, 124);
   cursor: pointer;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .social-media-list li:after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -150,7 +149,7 @@ textarea {
   border-radius: 50%;
   opacity: 0;
   box-shadow: 0 0 0 1px #fff;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .social-media-list li:hover {
@@ -160,7 +159,7 @@ textarea {
 .social-media-list li:hover:after {
   opacity: 1;
   transform: scale(1.12);
-  transition-timing-function: cubic-bezier(0.37,0.74,0.15,1.65);
+  transition-timing-function: cubic-bezier(0.37, 0.74, 0.15, 1.65);
 }
 
 .social-media-list li:hover a {
@@ -168,14 +167,14 @@ textarea {
 }
 
 .copyright {
-  font: 200 14px 'Oswald', sans-serif;
+  font: 200 14px "Oswald", sans-serif;
   color: #555;
   letter-spacing: 1px;
   text-align: center;
 }
 
 hr {
-  border-color: rgba(255,255,255,.6);
+  border-color: rgba(255, 255, 255, 0.6);
 }
 
 /* Begin Media Queries*/
@@ -187,7 +186,6 @@ hr {
   .direct-contact-container, .form-horizontal {
     margin: 0 auto;
   }
-
   .direct-contact-container {
     margin-top: 60px;
     max-width: 300px;
@@ -203,23 +201,17 @@ hr {
     line-height: 60px;
   }
 }
-
 @media screen and (max-width: 569px) {
-
   .direct-contact-container, .form-wrapper {
     float: none;
     margin: 0 auto;
   }
   .form-control, textarea {
-
     margin: 0 auto;
   }
-
-
   .name, .email, textarea {
     width: 280px;
   }
-
   .direct-contact-container {
     margin-top: 60px;
     max-width: 280px;
@@ -238,11 +230,11 @@ hr {
     height: 55px;
     line-height: 55px;
   }
-
 }
-
 @media screen and (max-width: 410px) {
   .send-button {
     width: 99%;
   }
 }
+
+/*# sourceMappingURL=contact.component.css.map */

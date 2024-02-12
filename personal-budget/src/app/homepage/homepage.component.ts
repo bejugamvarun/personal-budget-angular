@@ -4,22 +4,31 @@ import {DataService, DataSource, MyBudget} from "../services/data.service";
 import {ChartOptions} from "chart.js";
 import {NgChartsModule} from "ng2-charts";
 import * as d3 from 'd3';
+import {BreadcrumbComponent} from "../breadcrumb/breadcrumb.component";
 
 @Component({
   selector: 'pb-homepage',
   standalone: true,
   imports: [
     ArticleComponent,
-    NgChartsModule
+    NgChartsModule,
+    BreadcrumbComponent
   ],
   templateUrl: './homepage.component.html',
   styleUrl: './homepage.component.scss'
 })
-export class HomepageComponent implements AfterViewInit {
+export class HomepageComponent {
   dataSource: DataSource = {} as DataSource;
   constructor(private dataService: DataService) {
-
-
+    if (Object.keys(this.dataSource).length === 0) {
+      this.dataService.fetchData().subscribe((data) => {
+        this.dataSource = data;
+        this.pieChartLabels = this.dataSource.myBudget.map((item: MyBudget) => item.title);
+        this.pieChartDatasets[0].data = this.dataSource.myBudget.map((item: MyBudget) => item.budget);
+        this.createSvg();
+        this.drawBars(this.dataSource.myBudget);
+      });
+    }
   }
 
   public pieChartOptions: ChartOptions<'pie'> = {
@@ -33,16 +42,6 @@ export class HomepageComponent implements AfterViewInit {
 
   public pieChartLegend = true;
   public pieChartPlugins = [];
-
-  ngAfterViewInit(): void {
-    this.dataService.fetchData().subscribe((data) => {
-      this.dataSource = data;
-      this.pieChartLabels = this.dataSource.myBudget.map((item: MyBudget) => item.title);
-      this.pieChartDatasets[0].data = this.dataSource.myBudget.map((item: MyBudget) => item.budget);
-      this.createSvg();
-      this.drawBars(this.dataSource.myBudget);
-    });
-  }
 
   public svg: any;
   public margin = 50;
@@ -90,7 +89,7 @@ export class HomepageComponent implements AfterViewInit {
       .attr("y", (d: any) => y(d.budget))
       .attr("width", x.bandwidth())
       .attr("height", (d: any) => this.height - y(d.budget))
-      .attr("fill", "#d04a35");
+      .attr("fill", "#e87f28");
   }
 
 }
